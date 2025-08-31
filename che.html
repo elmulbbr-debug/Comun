@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasta la Victoria Siempre</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita barras de rolagem desnecessárias */
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .background-container {
+            background-image: url('images/fundo-che.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .scrolling-text-container {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .scrolling-text {
+            font-size: 10vw; /* Tamanho da fonte responsivo */
+            font-weight: bold;
+            color: #ff0000; /* Vermelho vibrante */
+            text-transform: uppercase;
+            animation: scroll-left 15s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <audio controls autoplay loop>
+            <source src="audio/seu_audio.mp3" type="audio/mpeg">
+            <source src="audio/che.ogg" type="audio/ogg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">
+                Hasta la Victoria Siempre!
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
